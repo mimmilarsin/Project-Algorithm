@@ -20,6 +20,8 @@ ds_t1 <- ds %>% mutate(
   ),
   .after = "PID"
 )
+
+view(ds_t1)
 # End Task 1
 
 
@@ -29,14 +31,14 @@ ds_t2_prep <- ds_t1 %>%
   separate_longer_delim(Name, delim = ";") %>%
 
   # Separate author and affiliation
-  separate_wider_delim(Name, delim = ", (", names = c("authorNameID", "affiliation"), too_few = "align_start", too_many = "merge") %>% #need to add code for multiple affiliations
+  # Note: Need to add code for multiple affiliations
+  separate_wider_delim(Name, delim = ", (", names = c("authorNameID", "affiliation"), too_few = "align_start", too_many = "merge") %>%
 
   # Separate affiliation into organization and country
   separate_wider_delim(affiliation, delim = ", ", names = c("organization", "country"), too_few = "align_start", too_many = "merge") %>%
 
   # Remove extra ) from initial formatting
   mutate(country = str_remove_all(country, "\\)"))
-
 
 ds_t2_compare <- ds_t2_prep %>%
   # Add authors column combining authorName, organization, and country data
@@ -73,4 +75,6 @@ ds_t2_compare <- ds_t2_prep %>%
   ungroup() %>%
   select(!authorNameID & !organization & !country) %>%
   distinct(PID, .keep_all = TRUE)
+
+view(ds_t2_compare)
 # End Task 2

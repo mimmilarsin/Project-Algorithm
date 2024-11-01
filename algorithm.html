@@ -22,15 +22,60 @@
     <!-- page layout -->
    
     <section class="welcome-section">
-        <h2>Welcome!</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur officia, animi obcaecati quam sit rerum quae perspiciatis nulla consequatur quos amet soluta aspernatur sapiente, alias maiores facere provident itaque expedita.</p>
+        <h2>The Algorithm</h2>
+        <p></p>
     </section>
-    <a href="algorithm.html" class="btn">Have a look at the algorithm</a><br>
+    <br>
+    <section class="intro">
+        <h2>Pseudocode</h2>
+        <p><b>Task 1:</b></p>
+        <p>Get dataset.csv<br>
+        Add column collabNum</p>
+        <p>For each publication of dataset:
+        <blockquote>If (publication authors == 1) Then
+            <blockquote>Set collabNum to "individual"</blockquote>
+            ElseIf (publication authors == 2) Then
+            <blockquote>Set collabNum to "pair"</blockquote>
+            Else
+            <blockquote>Set collabNum to "group"</blockquote>
+        </blockquote>
+        Print dataset
+        </p>
+        <p><b>Task 2:</b></p>
+        <p>Get dataset.csv<br>
+        Add column collabType</p>
+        <p>For each publication:
+        <blockquote>If (publication author > 1) Then
+            <blockquote>Separate into individual authors</blockquote>
+            Else
+            <blockquote>For each publication author:
+                <blockquote>Separate into author name and affiliation</blockquote>
+                <blockquote>If (author affiliation > 1) Then
+                    <blockquote>Separate affiliation</blockquote>
+                    Else
+                    <blockquote>For each author affiliation:
+                        <blockquote>Separate into organization and country</blockquote>
+                    </blockquote>
+                </blockquote>
+            </blockquote>
+        </blockquote></p>
+        <p>For each publication:
+        <blockquote>If (publication authors == 1) Then
+            <blockquote>Set collabType to "no collaboration"</blockquote>
+            ElseIf (organization == 1) Then
+            <blockquote>Set collabType to "local"</blockquote>
+            ElseIf (country == 1) Then
+            <blockquote>Set collabType to "national"</blockquote>
+            Else
+            <blockquote>Set collabType to "international"</blockquote>
+        </blockquote>
+        Print dataset</p>
+    </section>
     <section class="assignment-section">
-        <h2>something</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur officia, animi obcaecati quam sit rerum quae perspiciatis nulla consequatur quos amet soluta aspernatur sapiente, alias maiores facere provident itaque expedita. </p>
+        <h2>The Files</h2>
+        <a href="data/algorithm.md" class="btn">View the pseudocode in markdown</a><br>
+        <a href="data/algorithm.R" class="btn">View the code in R</a>
+        <a href="data/algorithm.py" class="btn">View the code in python</a>
     </section>
-    <a href="people.html" class="btn">The people</a>
-    
 </body>
 </html>

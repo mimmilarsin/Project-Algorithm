@@ -11,8 +11,6 @@ import pandas as pd
 # read dataset
 ds = pd.read_csv('A2_Algorithm Design/three-by-three/data/testDataset.csv')
 
-#print(ds.to_string())
-
 # Task 1
 ds_t1 = ds.copy()
 ds_t1.insert(1, "collabNum", "")
@@ -56,5 +54,6 @@ ds_t2 = task2grouped.take([0,1], axis = 1)
 
 result = pd.merge(ds_t1, ds_t2, on="PID")
 result.insert(1, "collabType", result.pop("collabType"))
+
 print(result.take([0,1,2], axis=1))
 # End Task 2
