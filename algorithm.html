@@ -9,7 +9,7 @@
 <body>
         
     <header>
-        <h1>Welcome to our creepy website from the 90´s</h1>
+        <h1>The Algorithm</h1>
     </header>
     <nav>
         <ul>
@@ -22,8 +22,33 @@
     <!-- page layout -->
    
     <section class="welcome-section">
-        <h2>The Algorithm</h2>
-        <p></p>
+        <h2>The Design & Tasks</h2>
+        <p>The algorithm was designed to process a data set consisting of research publication records sourced from DiVA
+             portal, focusing on author collaborations. The overall goal was to be able to determine the number of authors per 
+             publication and then categorize collaborative authorships based on the institutional and national affiliations 
+             of each author. Analyses of these collaboration patterns can provide useful insight into the current state of a 
+             research network, drawing attention to the range and diversity of collaborators. Further analyses can be 
+             performed using this categorical data, including: annual comparisons for a single department or institution, 
+             inter-departmental comparisons at the institutional level, and national comparisons within a particular field or 
+             discipline, etc.</p>
+        <p>For a small data set, assigning categories to each publication record can be done manually without too much of a 
+            time commitment. However, as the data set grows, and the level of analysis does as well, it becomes more efficient 
+            to automate the process using an algorithm.</p>
+        <p>Two primary tasks were identified for our purposes:
+            <ol>
+                <li>Determine the number of authors</li>
+                <li>Determine the collaboration type</li>
+            </ol>
+            The first task would need to identify the number of authors for a publication, and then categorize the 
+            collaboration as either individual, pair, or group. The second task would then compare the affiliations between 
+            co-authors, filtering out individually-authored publications, categorizing the collaboration type as either local 
+            (within the same institution), national (within the same country), or international (multiple countries). Since 
+            authors and their affiliations are located in a single field when sourcing publication records from DiVA portal, a 
+            sub-task separating the affiliation details would need to be included before the collaboration type could be 
+            determined.
+        </p>
+        <p>The pseudocode for the algorithm has been included here in plaintext format, while the markdown file can be downloaded below. Files are also available for the algorithm as functional code in both R and python scripts.
+        </p>
     </section>
     <br>
     <section class="intro">
