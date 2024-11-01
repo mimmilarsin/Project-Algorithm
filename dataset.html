@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Algorithm</title>
+    <title>Dataset</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -31,15 +31,17 @@
             This gave us a total of 94 results which we exported fully with all the metadata on to a CSV file. <br>
             The goal of our algorithm was to fund out how many authors had worked on one paper, and if the collaborations were local 
             (through the same institution), national (from different institutions in Sweden) or international. .</p>
-            <a href="algorithm.html" class="btn">Have a look at the algorithm</a>
+            <a href="data/Copy algorithm data shortened.csv" class="btn">Klick here to download cleaned data</a>
     </section>
     <br>
     <section class="assignment-section">
-        <h2>Scruba dub dub bo bo </h2>
+        <h2>Cleaning the data</h2>
         <p>In order to achieve our algorithmic goal we had to clean out data accordingly. We chose to focus on the authors 
             names, orcid-id, what institution they work for and in what country. All other information was removed, and the 
             necessary information was structured in a consistent CSV file, demonstrated as follows: <br>
+            <br>
             Lastname, Firstname, orcid, (organisation, country) <br>
+            <br>
             As some authors were affiliated with multiple organisations over multiple countries this was written in parenthesis so the information could be repeated within the same comma. Where information was missing it was replaced with a space to ensure the data would still be read correctly by the algorithm.<br>
             Once the data had been cleaned, we chose to fill in some missing data which mainly consisted of 
             some missing orcid-id's or organisation.<br>
