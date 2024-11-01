@@ -9,7 +9,7 @@
 library(tidyverse)
 
 # Load dataset ----
-ds <- read_csv("testDataset.csv")
+ds <- read_csv("data/Copy algorithm data main columns.csv")
 
 # Task 1 ----
 ds_t1 <- ds %>% mutate(

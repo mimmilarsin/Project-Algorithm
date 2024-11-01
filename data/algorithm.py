@@ -9,7 +9,7 @@
 import pandas as pd
 
 # read dataset
-ds = pd.read_csv('A2_Algorithm Design/three-by-three/data/testDataset.csv')
+ds = pd.read_csv('data/Copy algorithm data main columns.csv')
 
 # Task 1
 ds_t1 = ds.copy()
